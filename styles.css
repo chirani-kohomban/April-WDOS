@@ -1,0 +1,1393 @@
+/*home-page*/
+/*general footer and navigation bar*/
+body, html {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:#0c0c0c;
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+.navbar {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Keeps it at the top */
+    top: 0;
+    
+}
+
+/* Navigation Links (Horizontal for Larger Screens) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+   
+}
+
+/* Style for Individual Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Hamburger Menu Icon (Hidden on Large Screens) */
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+    background-color: transparent; /* Transparent background */
+    border: none;
+    outline: none;
+}
+
+    /* Hide navigation links by default */
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        background-color: #333; /* Background color for dropdown */
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute; /* Dropdown positioning */
+        top: 60px; /* Adjust to appear below the hamburger menu */
+        right: 20px; /* Align to the right */
+        z-index: 1000;
+    }
+
+    /* Show navigation links when hovering over the hamburger */
+    .hamburger:hover + nav .nav-links {
+        display: flex; /* Display navigation links */
+    }
+
+
+/* Adjust the navbar for smaller screens */
+.navbar {
+    position: relative;
+}
+
+.footer{
+    position: relative;
+}
+/* Logo Image - Make it small and round */
+.navbar .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*hero banner applied to both home page and about us page*/
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust this based on your desired banner height */
+    overflow: hidden;
+  }
+  
+  .hero-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the area without stretching */
+    object-position: center; /* Optionally adjust the position of the image */
+  }
+  
+
+
+.hero-content {
+    color: #ffffff; /* White text for contrast */
+    text-align: left; /* Align text to the left */
+    position: absolute; /* Allow precise positioning */
+    left: 50px; /* Adjust horizontal placement */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    max-width: 40%; /* Limit width for readability */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem; /* Large, bold heading */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+  }
+  .section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.section-container:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling (home page)*/
+.section-img {
+    width: 450px !important;
+    height: 450px !important;
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 87, 51, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*search container styled for all the 7 pages*/
+/* Search Container for all the 7 pages*/
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #222;
+    color: #fff;
+    width: 300px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1101f0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.abt-img{
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 87, 51, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.abt-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 165, 0, 0.9);
+}
+
+.navbar{
+    align-content: center;
+    justify-content: center;
+}
+.section-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 165, 0, 0.9);
+}
+
+/* Text Box Styling (about us)*/
+.text-box {
+    max-width: 500px;
+}
+
+/* Heading Styling (about us) */
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #f0a500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Paragraph Text Styling (about us) */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Styles (for all the 7 pages) */
+footer {
+    background-color: #121212; /* Dark background for a gaming vibe */
+    color: white; /* White text for contrast */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center text alignment */
+    font-family: 'Arial', sans-serif; /* Clean font for readability */
+    border-top: 3px solid #00FF00; /* Green border for a techy look */
+}
+
+.footer-container {
+    max-width: 1200px; /* Maximum width of footer content */
+    margin: 0 auto; /* Center align the content */
+    display: flex;
+    justify-content: space-between; /* Space out contact info and social media */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.contact-info {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 10px 0; /* Add space between paragraphs */
+}
+
+.contact-info a {
+    color: #00FF00; /* Green color for email links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.contact-info a:hover {
+    color: #fff; /* Change to white when hovered */
+}
+
+.social-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow icons to wrap on small screens */
+    border-radius: 50%;
+}
+
+.social-media p {
+    flex-basis: 100%; /* Make the "Follow Us" text take up full width */
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 40px; /* Size of icons */
+    height: 40px;
+    margin: 0 15px; /* Space between icons */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition */
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Slight fade effect */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888; /* Lighter text color */
+}
+
+
+
+/*About us section styling*/
+.what-we-offer{
+    font-size: 2.5rem;        /* Adjust the size of the heading */
+    font-weight: bold;       /* Make the text bold */
+    text-align: center !important;      /* Center-align the text */
+    color: #3498DB;          /* Set text color (white in this case) */
+    margin-top: 20px;        /* Add spacing above the heading */
+    margin-bottom: 20px;     /* Add spacing below the heading */
+    text-transform: uppercase; /* Make all text uppercase */
+    letter-spacing: 2px;     /* Add space between letters for a clean look */
+    justify-content: center;
+}
+
+.first-two-sections{
+    display: flex;
+    justify-content: space-between; /* Distribute space between the two couples */
+    gap: 20px; /* Space between each couple */
+    flex-wrap: wrap; /* Ensures the content wraps on smaller screens */
+}
+
+/* Style each couple */
+.aboutus-container {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    justify-content: flex-start; /* Align items to the start of the container */
+    width: 48%; /* Make each couple take up half of the container's width */
+}
+
+/* Style for the image */
+.section-img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add space between the image and the text */
+}
+
+/* Style for the text next to the image */
+.abt-text {
+    flex: 1; /* Allow the text to take the remaining space */
+}
+.map-text {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 20px; /* Add spacing between text and image */
+}
+
+.branch-pic {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Optional: Extra spacing */
+}
+
+
+.store-info {
+    margin-bottom: 20px; /* Add space between the description and image */
+}
+
+.second-two-sections{
+    display: flex;
+    justify-content: space-between; /* Distribute space between the two couples */
+    gap: 20px; /* Space between each couple */
+    flex-wrap: wrap; /* Ensures the content wraps on smaller screens */
+}
+
+/* Style each couple */
+.aboutus-container {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    justify-content: flex-start; /* Align items to the start of the container */
+    width: 48%; /* Make each couple take up half of the container's width */
+    color: #8A2BE2;
+}
+h3{
+    color: #8A2BE2;
+}
+/* Style for the image */
+.section-img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add space between the image and the text */
+}
+
+/* Style for the text next to the image */
+.abt-text {
+    flex: 1; /* Allow the text to take the remaining space */
+    color: #D3D3D3;
+     font-size: 20px;
+}
+.abt-img{
+    margin: 35px;
+}
+.section-img{
+    height: 220px;
+    width: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/*outlets (about us)*/
+/* Style the header */
+h2 {
+    font-size: 24px;
+    color:#8A2BE2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Create a text box style for the outlet list */
+.outlet-list {
+    background-color: #000; /* Black background for the box */
+    border: 2px solid #8A2BE2;
+    padding: 20px; /* Padding inside the box */
+    width: 80%; /* Adjust width, or set to 100% for full width */
+    margin: 0 auto; /* Center the box horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+.outlet-list {
+    background-color: #393333; /* Light gray background */
+    border: 2px solid #8A2BE2;
+    padding: 20px;            /* Spacing inside the div */
+    border-radius: 10px;      /* Rounded corners */
+    max-width: 600px;         /* Limit the width of the section */
+    margin: 20px auto;        /* Center the div with margin */
+    font-family: Arial, sans-serif; /* Set font style */
+    color: #EDEDED;           /* Text color (green) */
+    font-size: 24px;          /* Adjust font size */
+    text-align: left;         /* Align text to the left */
+}
+
+.outlet-list ol {
+    padding-left: 20px;       /* Add spacing before the numbers */
+    list-style-position: inside; /* Ensure numbers align closer to the text */
+    margin: 0;
+}
+
+.outlet-list li {
+    margin-bottom: 10px;      /* Add space between list items */
+    font-size: 20px;          /* Slightly smaller font size for the items */
+    color: #EDEDED;           /* Green color for text */
+}
+
+  
+  .intro-description p {
+    font-size: 16px;         /* Paragraph font size */
+    color: #4CAF50;             /* Medium gray color */
+    line-height: 1.6;        /* Space between lines */
+    text-align: justify;     /* Justify the text */
+  }
+  
+
+/* Style the outlet box */
+.outlet-box {
+    background-color: #000; /* Black background */
+    border: 2px solid #8A2BE2;
+    padding: 20px;
+    width: 80%; /* Adjust width, or set to 100% for full width */
+    margin: 0 auto; /* Center the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+    margin-bottom: 20px; /* Space between outlets */
+}
+
+/* Style for the heading */
+.outlet-box h3 {
+    font-size: 24px;
+    color:#8A2BE2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Container for map and text */
+.outlet-map-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space out the map and the text */
+    align-items: flex-start; /* Align map and text at the top */
+}
+
+/* Style the map container */
+.map-container {
+    flex: 0 0 60%; /* Ensures the map takes up 60% of the container */
+    max-width: 60%; /* Prevents the map from expanding beyond this width */
+    margin-right: 20px; /* Space between map and text */
+}
+
+/* Style the text container (map-text) */
+.map-text {
+    flex: 0 0 35%; /* Ensures the text takes up 35% of the container */
+    color: #fff; /* White text color */
+    font-size: 16px;
+    padding-left: 10px;
+    max-width: 35%; /* Prevents the text from expanding beyond this width */
+}
+
+.map-container iframe {
+    width: 100%; /* Ensure the map scales to the new container width */
+    height: 300px; /* Set a fixed height for smaller screens */
+}
+
+
+/* Style the bullet point list */
+.store-info {
+    color: #fff; /* White text color for the list */
+    font-size: 16px; /* Same size as the description text */
+    padding-left: 20px; /* Indentation of bullet points */
+    list-style-type: disc; /* Default bullet points */
+}
+
+.store-info li {
+    margin-bottom: 8px; /* Space between bullet points */
+    font-family: Arial, sans-serif; /* Set font for list items */
+}
+
+
+/* Style for the table */
+.store-table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Merge table borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+/* Style for the table headers */
+.store-table th {
+    background-color: #8A2BE2;
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for the table data cells */
+.store-table td {
+    background-color: #333; /* Dark background for data cells */
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #8A2BE2;
+}
+
+
+ /* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f9f9f8;
+}
+
+/* Hamburger Menu (Hidden by Default on Desktop) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+    align-items: right;
+    background-color: #fffcfc00;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hamburger Menu (Hidden by Default on Desktop) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Display the hamburger menu on hover of its parent (e.g., the navigation bar) */
+.nav:hover .hamburger {
+    display: flex; /* Show the hamburger menu when hovered */
+    align-items: center; /* Ensure it's properly aligned */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f9f8f7;
+}
+.menu-toggle:checked + .hamburger + nav .nav-links {
+    display: flex;
+}
+
+
+
+/* (UPCOMING GAMES) intro */
+.intro-description {
+    background: linear-gradient(135deg, #393333, #2c2c2c); /* Stylish gradient background */
+    border: 2px solid #8A2BE2;
+    padding: 25px; /* More spacious padding */
+    border-radius: 15px; /* Smoother rounded corners */
+    max-width: 700px; /* Slightly larger width for balance */
+    margin: 30px auto; /* Center and add extra space */
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+    
+}
+
+.intro-description:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+ h4 {
+    font-size: 28px; /* Larger heading font size */
+    color: #000000; /* Bold purple color */
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px #fff, 1px 1px 10px rgba(155, 89, 182, 0.5); /* Cool glowing text effect */
+}
+
+.intro-description p {
+    font-size: 18px; /* Slightly larger paragraph text */
+    color: #f1f1f1; /* Light gray for better contrast */
+    line-height: 1.8; /* Increased line spacing for readability */
+    text-align: justify; /* Justify the text */
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+.head{
+    color:#8A2BE2;
+    font-size: 40px;
+    text-shadow:#ccc ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+  /*upcoming games page image alignings and styles*/
+  .upcoming-games-images{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-content: center;
+  }
+  
+  
+  /* Individual item styles */
+  .item {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  /* Image container with hover effect */
+  .image-container {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background: #ccc;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hidden release date */
+  .release-date {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 200%;
+    text-align: center;
+    padding: 5px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Show release date on hover */
+  .image-container:hover .release-date {
+    transform: translateY(0);
+  }
+  
+  /* Name styles */
+  .name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*makes the image fill the box*/
+  }
+.name{
+    color: #f0a500;
+    text-shadow: #4CAF50;
+}
+
+
+
+/*CONSOLES*/
+.consoles-images {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#0c0c0c; /* Optional background for better visibility */
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 35px; /* Spacing between items */
+    width: 90%;
+    max-width: 1200px; /* Ensures it doesn't expand too much */
+    margin: 0 auto; /* Centers the grid horizontally */
+}
+
+/* Individual item styles */
+.item {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Image container with hover effect */
+.image-container {
+    width: 100%; /* Matches grid column width */
+    max-width: 300px; /* Limits the size of the image container */
+    aspect-ratio: 1 / 1; /* Ensures the container is always square */
+    margin: 0 auto; /* Centers the image container */
+    background: #ccc;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+/* Hidden release date */
+.release-date {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    text-align:left;
+    padding: 5px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show release date on hover */
+.image-container:hover .release-date {
+    transform: translateY(0);
+}
+
+/* Name styles */
+.name {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Image styles */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container proportionally */
+}
+/*Queries & FAQs*/
+#help-center-heading{
+    font-size: 35px; /* Sets the font size */
+    color: #8A2BE2; /* Sets the text color */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space above the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    font-family: 'Arial', sans-serif; /* Sets the font */
+    letter-spacing: 2px; /* Adjusts spacing between letters */
+    
+}
+/*questions and form*/
+section.help-center {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #302f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Help Center Heading */
+  #help-center-heading {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4c4bfc;
+  }
+  
+  /* FAQ Section */
+  .faq-container {
+    margin-bottom: 40px;
+    width: 50%;
+  }
+  
+  .faq-container h2 {
+    font-size: 24px;
+    color: #4c4bfc;
+    margin-bottom: 15px;
+  }
+  
+  details {
+    margin-bottom: 10px;
+    border: 2px solid #00FF00;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fdf9f9;
+  }
+  
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  details p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Contact Form Section */
+  .contact-form h2 {
+    font-size: 24px;
+    color: #4c4bfc;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea, 
+  .contact-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    width: 90%;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .contact-form button {
+    background-color: #2ef835;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    justify-content: center;
+    margin: 0 auto; /* Centers the button horizontally */
+    display: block; /* Ensures margin works properly */
+  }
+  
+  .contact-form button:hover {
+    background-color: #3a39a6;
+  }
+ /*MOBILE APPROACH*/
+  /* General Media Query for Responsive Design */
+  /* Adjust Nav Bar for Small Screens */
+@media (max-width: 768px) {
+   /* Dropdown Styling */
+/* Dropdown Styling */
+.nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+    display: none; /* Initially hidden */
+    background-color: #333; /* Background color for dropdown */
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px; /* Adjust position below hamburger */
+    right: 20px; /* Align to the right */
+    z-index: 1000;
+  }
+  
+  /* Show Nav Links on Hover */
+  .hamburger:hover + .nav-links,
+  .nav-links:hover {
+    display: flex; /* Keep dropdown visible on hover */
+  }
+  
+  /* Always Show Dropdown When Checkbox is Checked */
+  #check:checked ~ nav .nav-links {
+    display: flex; /* Ensure dropdown stays open */
+    height: auto; /* Expand dropdown */
+    padding: 10px;
+  }
+  
+  /* Links Inside the Dropdown */
+  .nav-links a {
+    width: 100%; /* Full width for each link */
+    padding: 10px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555; /* Change color on hover */
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger {
+    display: block;
+    cursor: pointer; /* Pointer cursor for hamburger icon */
+    position: relative;
+    font-size: 24px;
+    color: white;
+  }
+  
+  /* Checkbox is hidden */
+  #check {
+    display: none;
+  }
+}
+
+/* Ensure Horizontal Layout for Large Screens */
+@media (min-width: 769px) {
+    .nav-links {
+        flex-direction: row; /* Keep links horizontal */
+        display: flex; /* Always visible */
+        position: static; /* Reset position */
+        background-color: transparent; /* No background for desktop */
+        padding: 0; /* Remove extra padding */
+    }
+
+    
+}
+@media (max-width: 768px) {
+    
+
+    /* Hero Section */
+    .hero-banner {
+        height: 50vh;
+    }
+
+    .hero-content {
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Section Containers */
+    .section-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .section-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* About Us Sections */
+    .first-two-sections, .second-two-sections {
+        flex-direction: column;
+    }
+
+    .aboutus-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding: 10px;
+    }
+
+    /* Outlet Map and Text */
+    .outlet-map-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .map-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .map-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Grid Container for Consoles/Images */
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .image-container {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* Upcoming Games Section */
+    .upcoming-games-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Store Table */
+    .store-table th, .store-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further Adjustments for Very Small Screens */
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .section-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aboutus-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .abt-text {
+        margin-top: 10px;
+    }
+
+   
+
+    .store-table th, .store-table td {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .first-two-sections, .second-two-sections {
+        flex-direction: column; /* Stack the couples vertically on smaller screens */
+    }
+    .image-container{
+       flex-direction: column;
+    }
+    .aboutus-container {
+        width: 100%; /* Make each couple take the full width of the container */
+        margin-bottom: 20px; /* Add space between stacked couples */
+    }
+}
+/* Responsive Design for Screens Less Than 768px */
+@media (max-width: 768px) {
+    .outlet-map-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align the items */
+        text-align: center; /* Center the text */
+    }
+
+    .map-container {
+        flex: 0 0 100%; /* Make the map take full width */
+        max-width: 100%;
+        margin-right: 0; /* Remove the right margin */
+    }
+
+    .map-text {
+        flex: 0 0 100%; /* Make the text take full width */
+        max-width: 100%; /* Prevent overflow */
+        padding-left: 0; /* Remove left padding */
+        margin-top: 20px; /* Add spacing above the text */
+    }
+}
+/* BODY - Gamey background */
+body {
+    background-color: #0b0b0b;
+    color: #d3d3d3;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* TABLE - Order Summary Styling */
+#summaryTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 0 0 15px #7f00ff;
+}
+
+#summaryTable th, 
+#summaryTable td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+#summaryTable thead {
+    background-color: #2a003f;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+#summaryTable tfoot td {
+    font-weight: bold;
+    background-color: #101010;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+button {
+    background-color: #7f00ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #39ff14;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #a020f0;
+    transform: scale(1.05);
+}
+.form-section{
+    background-color: #000;
+    
+}
+/* General Styles for the checkout page */
+.checkout-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1a1a1a; /* Dark background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: #ffffff; /* White text for contrast */
+  }
+  
+  /* Section Titles */
+  .checkout-form .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #9d44e0; /* Purple */
+    border-bottom: 2px solid #9d44e0; /* Purple underline */
+    padding-bottom: 5px;
+  }
+  
+  /* Labels and Inputs */
+  .checkout-form .form-label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #b2b2b2; /* Light gray text */
+  }
+  
+  .checkout-form .form-label input {
+    display: block;
+    width: 90%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #3b3b3b; /* Dark gray border */
+    border-radius: 5px;
+    background-color: #3b3b3b; /* Dark input background */
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .checkout-form .form-label input:focus {
+    border-color: #8fdf41; /* Neon Green border on focus */
+    background-color: #333333; /* Darker background on focus */
+    outline: none;
+  }
+  
+  /* Pay Button */
+  .checkout-form .pay-button {
+    width: 100%;
+    background-color: #8fdf41; /* Neon Green */
+    color: black;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .checkout-form .pay-button:hover {
+    background-color: #6cd62e; /* Slightly darker Neon Green */
+    transform: scale(1.05); /* Slight scaling effect */
+  }
+  
+  /* Order Summary */
+  #orderSummary {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222222; /* Dark background */
+    border: 1px solid #222222; /* Slightly lighter border */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* White text */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .checkout-form {
+      padding: 20px;
+    }
+  
+    .checkout-form .pay-button {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 20px;
+  }
+  
+  .grid-item {
+    width: 250px; /* or whatever fixed width you want */
+    height: 200px; /* fixed height to make boxes equal */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #810ec9; /* Optional: box border */
+    box-sizing: border-box;
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 100px; /* force consistent image size */
+    object-fit: contain; /* Keeps aspect ratio inside the box */
+    margin-bottom: 10px;
+  
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .item-image:hover {
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.7);
+    border-color: #0096ff;
+  }
+  

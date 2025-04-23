@@ -1,0 +1,57 @@
+[
+  {
+    "category": "Processors",
+    "items": [
+      { "name": "Intel i9", "price": 500, "image": "images\\inteli9.jpg" },
+      { "name": "Intel i7", "price": 400, "image": "images\\inteli7.jpg" },
+      { "name": "AMD Ryzen 9", "price": 480, "image": "images\\AMD Ryzen 9.jpg" },
+      { "name": "AMD Ryzen 7", "price": 350, "image": "images\\AMD Ryzen 7.jpg" },
+      { "name": "Intel i5", "price": 280, "image": "images\\Intel i5.jpg" },
+      { "name": "AMD Ryzen 5", "price": 260, "image": "images\\AMD Ryzen 5.jpg" }
+    ]
+  },
+  {
+    "category": "Graphic Cards",
+    "items": [
+      { "name": "NVIDIA RTX 4090", "price": 1600, "image": "images\\NVIDIA RTX 4090.jpg" },
+      { "name": "NVIDIA RTX 4080", "price": 1200, "image": "images\\NVIDIA RTX 4080.jpg" },
+      { "name": "AMD RX 7900", "price": 1100, "image": "images\\AMD RX 7900.jpg" },
+      { "name": "NVIDIA RTX 5090", "price": 800, "image": "images\\NVIDIA RTX 5090.jpg" },
+      { "name": "AMD RX 7800", "price": 750, "image": "images\\AMD RX 7800.jpg" },
+      { "name": "NVIDIA RTX 4060", "price": 600, "image": "images\\NVIDIA RTX 4060.jpg" }
+    ]
+  },
+  {
+    "category": "Motherboards",
+    "items": [
+      { "name": "ASUS ROG", "price": 300, "image": "images\\ASUS ROG.jpg" },
+      { "name": "MSI Tomahawk", "price": 250, "image": "images\\MSI Tomahawk.jpg" },
+      { "name": "Gigabyte AORUS", "price": 280, "image": "images\\Gigabyte AORUS.jpg" },
+      { "name": "ASRock Phantom", "price": 200, "image": "images\\ASRock Phantom.jpg" },
+      { "name": "Biostar Racing", "price": 180, "image": "images\\Biostar Racing.jpg" },
+      { "name": "Intel Z790", "price": 350, "image": "images\\Intel Z790.jpg" }
+    ]
+  },
+  {
+    "category": "Memory (RAM)",
+    "items": [
+      { "name": "DRAM", "price": 480, "image": "images\\DRAM.jpg" },
+      { "name": "SRAM", "price": 250, "image": "images\\SRAM.jpg" },
+      { "name": "SDRAM", "price": 250, "image": "images\\SDRAM.jpg" },
+      { "name": "DDR SDRAM", "price": 250, "image": "images\\DDR SDRAM.jpg" },
+      { "name": "VRAM", "price": 250, "image": "images\\VRAM.jpg" },
+      { "name": "ECC RAM", "price": 250, "image": "images\\ECC RAM.jpg" }
+    ]
+  },
+  {
+    "category": "Storage Devices",
+    "items": [
+      { "name": "HDD", "price": 250, "image": "images\\HDD.jpg" },
+      { "name": "SSD", "price": 250, "image": "images\\SSD.jpg" },
+      { "name": "NVMe SSD", "price": 250, "image": "images\\NVMe SSD.jpg" },
+      { "name": "USB Flash Drive", "price": 250, "image": "images\\USB Flash Drive.jpg" },
+      { "name": "SD Card", "price": 250, "image": "images\\SD Card.jpg" },
+      { "name": "Optical Disc", "price": 250, "image": "images\\Optical Disc.jpg" }
+    ]
+  }
+]
