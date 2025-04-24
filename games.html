@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the latest gaming news, reviews, and exclusive deals at GameHub. Stay updated on upcoming games and accessories.">
-    <meta name="keywords" content="gaming, news, accessories, games, pre-orders, reviews, consoles, discounts">
-    <title>Gaming Website</title>
+    <title>GameHub</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-
-   
-    <div class="container">
-        <!-- Navigation Bar -->
-        <header class="navbar">
+    <!-- Navbar should be inside body -->
+    <nav class="navbar">
+        <div class="logo-container">
             <img src="./images/logo.png" alt="GameHub Logo" class="logo-img">
-            <a href="./images/logo.png" class="logo">GameHub</a>
-            <button class="hamburger">&#9776;</button>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./AboutUs.html">ABOUT US</a></li>
-                    <li><a href="./games.html">GAMES</a></li>
-                    <li><a href="./Ugames.html">UPCOMING GAMES</a></li>
-                    <li><a href="./peripherals.html">PERIPHERALS</a></li>
-                    <li><a href="./consoles.html">CONSOLES</a></li>
-                    <li><a href="./Order.html">ORDERS</a></li>
-                    <li><a href="./queries.html">QUERIES & FAQs</a></li>
-                </ul>
-            </nav>
-        </header>
+            <a href="./index.html" class="logo">GameHub</a>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <button class="hamburger">&#9776;</button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/AboutUs.html">ABOUT US</a></li>
+            <li><a href="/games.html">GAMES</a></li>
+            <li><a href="/Ugames.html">UPCOMING GAMES</a></li>
+            <li><a href="/peripherals.html">PERIPHERALS</a></li>
+            <li><a href="/consoles.html">CONSOLES</a></li>
+            <li><a href="./Order.html">ORDERS</a></li>
+            <li><a href="/queries.html">QUERIES & FAQs</a></li>
+        </ul>
+    </nav>
+        
 
         <!-- Search Bar -->
         <div class="search-container">
@@ -158,6 +156,7 @@
       </div>
     </div>
 </div>
+<script src="scripts/nav.js"></script>
 </body>
 
 <br><br>
